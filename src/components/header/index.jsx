@@ -1,12 +1,16 @@
 import { Link } from "react-router-dom";
+import { HeaderContainer, LogoContainer, Title } from "./style";
 
 export const Header = () => {
     return (
-        <header>
-            <div className="container-logo">
+        <HeaderContainer>
+            <LogoContainer>
                 <img className="logo" src="" alt="" />
-                <h1> <span className="destaque">Lavandinha</span> bordados </h1>
-            </div>
+                <Title> 
+                    <span >Lavandinha</span> <br/> 
+                    bordados 
+                </Title>
+            </LogoContainer>
 
             <nav>
                 <ul>
@@ -27,6 +31,6 @@ export const Header = () => {
                     <li> <Link to="/contato"> Contato </Link> </li>
                 </ul>
             </nav>
-        </header>
+        </HeaderContainer>
     )
 } 
