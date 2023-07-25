@@ -7,6 +7,6 @@ export const AppRoutes = () => (
     <Routes>
         <Route exact path='/' element={<About />} />
         <Route exact path='/produtos' element={<Products />} />
-        <Route exact path='/sobre' element={<Contact />} />
+        <Route exact path='/contato' element={<Contact />} />
     </Routes>
 )
