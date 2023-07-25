@@ -5,7 +5,7 @@ const HeaderContainer = styled.header`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #BEA7C8;
+    background-color: #D5C3DD;
     max-width: 1440px;
     margin: 0 auto;
 `
@@ -57,14 +57,14 @@ const Item = styled.li `
     background: linear-gradient(to right, #756A8B, #BEA7C8);
     text-align: center;
     border-radius: 35px;
-    box-shadow: 1px 0 25px 2px #00000025;
-    width: 215px;
-    padding: 10px;
+    box-shadow: 1px 0 25px 2px #00000014;
+    width: 200px;
+    padding: 9px;
 
     a {
         color: #FFFFFF;
         font-family: 'Hatton', Arial;
-        font-size: 30px;
+        font-size: 27px;
         font-weight: 600;
     }
 `
@@ -73,16 +73,28 @@ const ProductButton = styled.button `
     background-color: #FFFFFF00;
     color: #FFFFFF;
     font-family: 'Hatton', Arial;
-    font-size: 30px;
+    font-size: 27px;
     font-weight: 600;
 `
 
 const ProductList = styled.ul `
     position: absolute;
-    bottom: 500px;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
 `
 
 const Product = styled.li `
-    
+    display: none;
+    background: linear-gradient(to right, #756A8B, #BEA7C8);
+    border-radius: 35px;
+    box-shadow: 1px 0 25px 2px #00000014;
+    width: 160px;
+    margin: 12px 0;
+    padding: 9px;
+
+    a {
+        font-size: 19px;
+    }
 `
 export { HeaderContainer, LogoContainer, Logo, Title, Navigation, List, Item, ProductButton, ProductList, Product }

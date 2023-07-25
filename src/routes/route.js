@@ -5,7 +5,7 @@ import { Contact } from '../pages/contact'
 
 export const AppRoutes = () => (
     <Routes>
-        <Route exact path='/sobre' element={<About />} />
+        <Route exact path='/' element={<About />} />
         <Route exact path='/produtos' element={<Products />} />
         <Route exact path='/sobre' element={<Contact />} />
     </Routes>

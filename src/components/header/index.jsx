@@ -14,7 +14,7 @@ export const Header = () => {
 
             <Navigation>
                 <List>
-                    <Item> <Link to="/sobre"> Sobre nós </Link> </Item>
+                    <Item> <Link to="/"> Sobre nós </Link> </Item>
 
                     <Item>
                         <ProductButton type='button'> Produtos </ProductButton>
