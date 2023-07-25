@@ -1,36 +1,36 @@
 import { Link } from "react-router-dom";
-import { HeaderContainer, LogoContainer, Title } from "./style";
+import { HeaderContainer, LogoContainer, Logo, Title, Navigation, List, Item, ProductButton, ProductList, Product } from "./style";
 
 export const Header = () => {
     return (
         <HeaderContainer>
             <LogoContainer>
-                <img className="logo" src="" alt="" />
+                <Logo className="logo" src="" alt="Imagem do logo" />
                 <Title> 
                     <span >Lavandinha</span> <br/> 
                     bordados 
                 </Title>
             </LogoContainer>
 
-            <nav>
-                <ul>
-                    <li> <Link to="/sobre"> Sobre nós </Link> </li>
+            <Navigation>
+                <List>
+                    <Item> <Link to="/sobre"> Sobre nós </Link> </Item>
 
-                    <li>
-                        <button type='button'> Produtos </button>
+                    <Item>
+                        <ProductButton type='button'> Produtos </ProductButton>
 
-                        <ul>
-                            <li> <Link to="/produtos"> Chaveirinhos </Link> </li>
-                            <li> <Link to="/produtos"> Bastidores </Link> </li>
-                            <li> <Link to="/produtos"> Ecobag </Link> </li>
-                            <li> <Link to="/produtos"> Necessaire </Link> </li>
-                            <li> <Link to="/produtos"> Quadros </Link> </li>
-                        </ul>
-                    </li>
+                        <ProductList>
+                            <Product> <Link to="/produtos"> Chaveirinhos </Link> </Product>
+                            <Product> <Link to="/produtos"> Bastidores </Link> </Product>
+                            <Product> <Link to="/produtos"> Ecobag </Link> </Product>
+                            <Product> <Link to="/produtos"> Necessaire </Link> </Product>
+                            <Product> <Link to="/produtos"> Quadros </Link> </Product>
+                        </ProductList>
+                    </Item>
 
-                    <li> <Link to="/contato"> Contato </Link> </li>
-                </ul>
-            </nav>
+                    <Item> <Link to="/contato"> Contato </Link> </Item>
+                </List>
+            </Navigation>
         </HeaderContainer>
     )
 } 
