@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { HeaderContainer, LogoContainer, Logo, Title, Navigation, List, Item, ProductButton, ProductList, Product } from "./style";
+import LogoImage from "../../assets/images/logo.png"
 
 export const Header = () => {
     return (
         <HeaderContainer>
             <LogoContainer>
-                <Logo className="logo" src="" alt="Imagem do logo" />
+                <Logo src={LogoImage} alt="Imagem do logo" />
                 <Title> 
                     <span >Lavandinha</span> <br/> 
                     bordados 
