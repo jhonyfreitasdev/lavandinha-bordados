@@ -6,7 +6,6 @@ export const ProductList = () => {
     const productSelected = products.find(product => product.id == id)
 
     return (
-
         <ul>
             {productSelected.products.map((product, index) => {
                 return (
