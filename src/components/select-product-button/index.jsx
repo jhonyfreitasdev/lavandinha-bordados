@@ -3,18 +3,21 @@ import { ProductButton, ProductList, Product } from "./style";
 import { useState } from "react";
 
 export const SelectButton = () => {
-    const [statusProductList, setStatusProductList] = useState(false)
+    const [ToggleList, setToggleList] = useState(false)
 
     return (
         <>
             <ProductButton
                 type='button'
-                onClick={() => statusProductList === false ? setStatusProductList(true) : setStatusProductList(false)}
+                onClick={() => ToggleList === false ? setToggleList(true) : setToggleList(false)}
             >
                 Produtos
             </ProductButton>
 
-            <ProductList id={statusProductList === true ? "able" : "disable"} >
+            <ProductList 
+                id={ToggleList === true ? "activated" : "disabled"} 
+                onClick={() => setToggleList(false)}
+            >
                 <Product> <Link to="/produtos/chaveirinhos"> Chaveirinhos </Link> </Product>
                 <Product> <Link to="/produtos/bastidores"> Bastidores </Link> </Product>
                 <Product> <Link to="/produtos/ecobag"> Ecobag </Link> </Product>

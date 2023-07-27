@@ -17,7 +17,7 @@ const ProductList = styled.ul `
     left: 50%;
     transform: translateX(-50%);
 
-    &[id= 'able'] {
+    &[id= 'activated'] {
         display: block;
     }   
 `
