@@ -3,7 +3,7 @@ import { products } from "../../objects/products"
 
 export const ProductList = () => {
     const { id } = useParams()
-    const productSelected = products.find(product => product.id == id)
+    const productSelected = products.find(product => product.id === id)
 
     return (
         <ul>
