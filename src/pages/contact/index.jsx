@@ -13,22 +13,21 @@ export const Contact = () => {
             <Text>Gostou de algum dos nossos produtos?<br /> Entre em contato com a gente, será um prazer te atender!</Text>
 
             <address>
-
                 <List>
                     <Icon>
-                        <a href="">
+                        <a href="#">
                             <FontAwesomeIcon icon={faWhatsapp} />
                         </a>
                     </Icon>
 
                     <Icon>
-                        <a href="">
+                        <a href="#">
                             <FontAwesomeIcon icon={faInstagram} />
                         </a>
                     </Icon>
 
                     <Icon>
-                        <a href="">
+                        <a href="#">
                             <FontAwesomeIcon icon={faEnvelope} />
                         </a>
                     </Icon>
@@ -37,6 +36,5 @@ export const Contact = () => {
 
             <Image src={ImageContact} alt="Imagem animada da criadora" />
         </Container>
-
     )
 }
