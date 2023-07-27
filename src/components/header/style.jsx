@@ -76,17 +76,22 @@ const ProductButton = styled.button `
     font-family: 'Hatton', Arial;
     font-size: 24px;
     font-weight: 600;
+    cursor: pointer;
 `
 
 const ProductList = styled.ul `
+    display: none;
     position: absolute;
-    top: 80px;
+    top: 70px;
     left: 50%;
     transform: translateX(-50%);
+
+    &[id= 'able'] {
+        display: block;
+    }   
 `
 
 const Product = styled.li `
-    display: none;
     background: linear-gradient(to right, #756A8B, #BEA7C8);
     border-radius: 35px;
     box-shadow: 1px 0 25px 2px #00000014;
