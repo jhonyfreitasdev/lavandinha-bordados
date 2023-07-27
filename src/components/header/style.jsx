@@ -23,21 +23,21 @@ const Logo = styled.img `
     transform: translateY(-50%);
     left: 4%;
     top: 50%;
-    width: 160px;
+    width: 135px;
 `
 
 const Title = styled.h1 `
     color: #756A8B;
     text-transform: uppercase;
     font-family: 'Hatton', Arial;
-    font-size: 37px;
-    line-height: 64px;
+    font-size: 32px;
+    line-height: 46px;
     margin-top: 15px;
 
     span {
         font-family: 'Le Jour Scripts', Arial;
         text-transform: capitalize;
-        font-size: 45px;
+        font-size: 35px;
         font-weight: 200;
     }
 `
@@ -45,7 +45,7 @@ const Title = styled.h1 `
 const Navigation = styled.nav `
     display: flex;
     justify-content: center;
-    padding: 15px 0 10px 0;
+    padding-top: 13px;
 `
 
 const List = styled.ul `
@@ -59,8 +59,8 @@ const Item = styled.li `
     text-align: center;
     border-radius: 35px;
     box-shadow: 1px 0 25px 2px #00000014;
-    width: 200px;
-    padding: 9px;
+    width: 180px;
+    padding: 7px;
 
     a {
         color: #FFFFFF;
