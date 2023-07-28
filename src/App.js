@@ -2,17 +2,18 @@ import { BrowserRouter } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 import { AppRoutes } from "./routes/route";
 import { Header } from "./components/header";
+import { FilterProvider } from "./context/filter-products";
 
 export const App = () => {
 	return (
-		<>
+		<FilterProvider>
 			<GlobalStyle />
 
 			<BrowserRouter>
 				<Header />
 				<AppRoutes />
 			</BrowserRouter>
-		</>
+		</FilterProvider>
 	);
 }
 
