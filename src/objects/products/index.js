@@ -1,11 +1,14 @@
+import image1 from "../../assets/images/bastidor-venus.jpeg"
+import image2 from "../../assets/images/chaveirinho-de-cachorro.jpeg"
+
 const chaveirinhos = [
     {
-        image: '',
+        image: image1,
         describe: 'Mini chaveiros de 4cm',
         price: 'R$ 22,00'
     },
     {
-        image: '',
+        image: image2,
         describe: 'Mini chaveiros de 4cm',
         price: 'R$ 22,00'
     }

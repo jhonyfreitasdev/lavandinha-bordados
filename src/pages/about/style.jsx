@@ -7,8 +7,8 @@ const Container = styled.div `
     align-items: flex-start;
     background-color: #D5C3DD;
     margin: 0 auto;
-    padding: 50px 0;
-    height: 98vh;
+    padding: 100px 0;
+    min-height: 69vh;
     max-width: 1440px;
 `
 

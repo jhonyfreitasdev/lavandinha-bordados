@@ -1,6 +1,9 @@
 import { useContext } from "react";
 import { FilterContext } from "../../context/filter-products";
 import { products } from "../../objects/products";
+import { Title, List, Item, ImageDiv, Describe, Price, Button } from "../product-list/style";
+import { Container } from "./style"
+
 
 export const FilteredList = () => {
     const { filteredProductName } = useContext(FilterContext)
@@ -8,21 +11,24 @@ export const FilteredList = () => {
     const filteredProduct = products.find(product => product.name === filteredProductName)
 
     return (
-        <>
-            <h3> {filteredProduct.name} </h3>
+        <Container>
 
-            <ul>
+            <Title> {filteredProduct.name} </Title>
+
+            <List>
                 {filteredProduct.list.map((product, index) => {
                     return (
-                        <li key={index}>
-                            <img src={product.image} alt="Imagem do produto" />
-                            <p> {product.describe} </p>
-                            <p> {product.price} </p>
-                            <button type="button" > Adicionar ao carrinho </button>
-                        </li>
+                        <Item key={index}>
+                            <ImageDiv>
+                                <img src={product.image} alt="Imagem do produto" />
+                            </ImageDiv>
+                            <Describe> {product.describe} </Describe>
+                            <Price> {product.price} </Price>
+                            <Button type="button" > Adicionar ao carrinho </Button>
+                        </Item>
                     )
                 })}
-            </ul>
-        </>
+            </List>
+        </Container>
     )
 }

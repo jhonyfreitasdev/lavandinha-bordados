@@ -11,8 +11,8 @@ const Container = styled.div`
     background-color: #D5C3DD;
     font-family: 'Hatton';
     margin: 0 auto;
-    padding: 45px 0;
-    height: 98vh;
+    padding: 100px 0;
+    min-height: 69vh;
     max-width: 1440px;
 `
 
@@ -50,7 +50,7 @@ const Icon = styled.li`
 
 const Image = styled.img`
     position: absolute;
-    top: 9%;
+    top: 15%;
     right: 30px;
     width: 280px;
 `

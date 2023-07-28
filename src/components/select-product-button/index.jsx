@@ -1,28 +1,31 @@
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { FilterContext } from "../../context/filter-products";
 import { ProductButton, ProductList, Product } from "./style";
-import { useState } from "react";
 
 export const SelectButton = () => {
-    const [ToggleList, setToggleList] = useState(false)
+    const [ToggleListStatus, setToggleListStatus] = useState(false)
+
+    const { setFilteredProductName } = useContext(FilterContext)
+
+    function toggleFilter(e) {
+        const productId = e.target.id
+
+        setFilteredProductName(productId)
+        setToggleListStatus(false)
+    }
 
     return (
         <>
-            <ProductButton
-                type='button'
-                onClick={() => ToggleList === false ? setToggleList(true) : setToggleList(false)}
-            >
-                Produtos
+            <ProductButton type='button' onClick={() => ToggleListStatus === false ? setToggleListStatus(true) : setToggleListStatus(false)}>
+                Filtrar por produto
             </ProductButton>
 
-            <ProductList 
-                id={ToggleList === true ? "activated" : "disabled"} 
-                onClick={() => setToggleList(false)}
-            >
-                <Product> <Link to="/produtos/chaveirinhos"> Chaveirinhos </Link> </Product>
-                <Product> <Link to="/produtos/bastidores"> Bastidores </Link> </Product>
-                <Product> <Link to="/produtos/ecobag"> Ecobag </Link> </Product>
-                <Product> <Link to="/produtos/necessaire"> Necessaire </Link> </Product>
-                <Product> <Link to="/produtos/quadros"> Quadros </Link> </Product>
+            <ProductList id={ToggleListStatus === true ? "activated" : "disabled"} onClick={toggleFilter}>
+                <Product > <button type="button" id="chaveirinhos"> Chaveirinhos </button> </Product>
+                <Product > <button type="button" id="bastidores"> Bastidores </button> </Product>
+                <Product > <button type="button" id="ecobag"> Ecobag </button> </Product>
+                <Product > <button type="button" id="necessaire"> Necessaire </button> </Product>
+                <Product > <button type="button" id="quadros"> Quadros </button> </Product>
             </ProductList>
         </>
     )

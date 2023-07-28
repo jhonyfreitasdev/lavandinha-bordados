@@ -1,27 +1,33 @@
-import { products } from "../../objects/products"
+import { products } from "../../objects/products";
+import { Container, ContainerList, Title, List, Item, ImageDiv, Describe, Price, Button } from "./style";
 
 export const ProductList = () => {
 
     return (
-        <>
+        <Container>
             {products.map((product, index) => {
                 return (
-                    <ul key={index}>
-                        <h3> {product.name} </h3>
+                    <ContainerList key={index}>
+                        <Title> {product.name} </Title>
 
-                        {product.list.map((item, index) => {
-                            return (
-                                <li key={index}>
-                                    <img src={item.image} alt="Imagem do produto" />
-                                    <p> {item.describe} </p>
-                                    <p> {item.price} </p>
-                                    <button type="button" > Adicionar ao carrinho </button>
-                                </li>
-                            )
-                        })}
-                    </ul>
+                        <List>
+
+                            {product.list.map((item, index) => {
+                                return (
+                                    <Item key={index}>
+                                        <ImageDiv>
+                                            <img src={item.image} alt="Imagem do produto" />
+                                        </ImageDiv>
+                                        <Describe> {item.describe} </Describe>
+                                        <Price> {item.price} </Price>
+                                        <Button type="button" > Adicionar ao carrinho </Button>
+                                    </Item>
+                                )
+                            })}
+                        </List>
+                    </ContainerList>
                 )
             })}
-        </>
+        </Container>
     )
 }
