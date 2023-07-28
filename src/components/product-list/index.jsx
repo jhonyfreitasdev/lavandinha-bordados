@@ -1,22 +1,27 @@
-import { useParams } from "react-router-dom"
 import { products } from "../../objects/products"
 
 export const ProductList = () => {
-    const { id } = useParams()
-    const productSelected = products.find(product => product.id === id)
 
     return (
-        <ul>
-            {productSelected.products.map((product, index) => {
+        <>
+            {products.map((product, index) => {
                 return (
-                    <li key={index}>
-                        <img src={product.image} alt="Imagem do produto" />
-                        <h3> {product.describe} </h3>
-                        <p> {product.price} </p>
-                        <button type="button" > Adicionar ao carrinho </button>
-                    </li>
+                    <ul key={index}>
+                        <h3> {product.name} </h3>
+
+                        {product.list.map((item, index) => {
+                            return (
+                                <li key={index}>
+                                    <img src={item.image} alt="Imagem do produto" />
+                                    <p> {item.describe} </p>
+                                    <p> {item.price} </p>
+                                    <button type="button" > Adicionar ao carrinho </button>
+                                </li>
+                            )
+                        })}
+                    </ul>
                 )
             })}
-        </ul>
+        </>
     )
 }
