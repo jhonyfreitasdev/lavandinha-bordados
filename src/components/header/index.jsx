@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
-import { SelectButton } from "../select-product-button";
-import { HeaderContainer, LogoContainer, Logo, Title, Navigation, List, Item } from "./style";
+import { useContext } from "react";
+import { FilterContext } from "../../context/filter-products";
 import LogoImage from "../../assets/images/logo.png"
+import { HeaderContainer, LogoContainer, Logo, Title, Navigation, List, Item } from "./style";
 
 export const Header = () => {
+    const { setFilteredProductName } = useContext(FilterContext)
+
     return (
         <HeaderContainer>
             <LogoContainer>
@@ -18,9 +21,7 @@ export const Header = () => {
                 <List>
                     <Item> <Link to="/"> Sobre nós </Link> </Item>
 
-                    <Item>
-                        <SelectButton />
-                    </Item>
+                    <Item> <Link to="/produtos" onClick={() => setFilteredProductName('')}> Produtos </Link> </Item>
 
                     <Item> <Link to="/contato"> Contato </Link> </Item>
                 </List>
