@@ -1,7 +1,7 @@
-import { Container, Logo, Title, Text, List, Icon, Image } from "./style.jsx";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { Container, Logo, Title, Text, List, Icon, Image } from "./style.jsx";
 import ImageContact from "../../assets/images/image-contact.png";
 
 export const Contact = () => {
