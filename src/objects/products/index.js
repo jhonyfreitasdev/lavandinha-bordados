@@ -65,23 +65,23 @@ const quadros = [
 
 export const products = [
     {
-        id: 'chaveirinhos',
-        products: chaveirinhos
+        name: 'chaveirinhos',
+        list: chaveirinhos
     },
     {
-        id: 'bastidores',
-        products: bastidores
+        name: 'bastidores',
+        list: bastidores
     },
     {
-        id: 'ecobag',
-        products: ecobag
+        name: 'ecobag',
+        list: ecobag
     },
     {
-        id: 'necessaire',
-        products: necessaire
+        name: 'necessaire',
+        list: necessaire
     },
     {
-        id: 'quadros',
-        products: quadros
+        name: 'quadros',
+        list: quadros
     }
 ]
