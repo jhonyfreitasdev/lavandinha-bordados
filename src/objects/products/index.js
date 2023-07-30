@@ -1,68 +1,87 @@
-import image1 from "../../assets/images/bastidor-venus.jpeg"
-import image2 from "../../assets/images/chaveirinho-de-cachorro.jpeg"
+import { images } from "../images"
 
 const chaveirinhos = [
     {
-        image: image1,
-        describe: 'Mini chaveiros de 4cm',
+        image: images.chaveiroPet,
+        describe: 'Chaveiro pet personalizado',
         price: 'R$ 22,00'
     },
     {
-        image: image2,
-        describe: 'Mini chaveiros de 4cm',
+        image: images.chaveiroPet2,
+        describe: 'Chaveiro pet personalizado',
         price: 'R$ 22,00'
-    }
+    },
+    {
+        image: images.chaveiroMickey,
+        describe: 'Chaveiro Mickey',
+        price: 'R$ 22,00'
+    },
+    {
+        image: images.chaveiroNSAparecida,
+        describe: 'Chaveiro N.S. Aparecida',
+        price: 'R$ 22,00'
+    },
+    {
+        image: images.chaveiroAbelha,
+        describe: 'Chaveiro Abelhinha',
+        price: 'R$ 22,00'
+    },
 ]
 
 const bastidores = [
     {
-        image: '',
-        describe: 'Mini bastidores de 4cm',
-        price: 'R$ 22,00'
+        image: images.bastidorVenus,
+        describe: 'Bastidor Vênus - 16cm',
+        price: 'R$ 54,00'
     },
     {
-        image: '',
-        describe: 'Mini bastidores de 4cm',
-        price: 'R$ 22,00'
+        image: images.bastidorCoelha,
+        describe: 'Bastidor Coelhinha - 16cm',
+        price: 'R$ 54,00'
     }
 ]
 
 const ecobag = [
     {
-        image: '',
-        describe: 'Mini ecobag de 4cm',
-        price: 'R$ 22,00'
+        image: images.ecobagLibelula,
+        describe: 'Ecobag Libélula',
+        price: 'R$ 56,00'
     },
     {
-        image: '',
-        describe: 'Mini ecobag de 4cm',
-        price: 'R$ 22,00'
-    }
+        image: images.ecobabFloresAlgodao,
+        describe: 'Ecobag Flores de Algodão',
+        price: 'R$ 56,00'
+    },
+    {
+        image: images.ecobagGatos,
+        describe: 'Ecobag Gato e Arte',
+        price: 'R$ 56,00'
+    },
+    {
+        image: images.ecobagFloresAzuis,
+        describe: 'Ecobag Flores Azuis',
+        price: 'R$ 56,00'
+    },
 ]
 
-const necessaire = [
+const camisetas = [
     {
-        image: '',
-        describe: 'Mini necessaire de 4cm',
-        price: 'R$ 22,00'
+        image: images.camisetaSaoJose,
+        describe: 'Camiseta São José',
+        price: 'R$ 100,00'
     },
     {
-        image: '',
-        describe: 'Mini necessaire de 4cm',
-        price: 'R$ 22,00'
+        image: images.camisetaPersonalizada,
+        describe: 'Camiseta com bordado personalizado',
+        price: 'R$ 100,00'
     }
 ]
 
 const quadros = [
     {
-        image: '',
-        describe: 'Mini quadros de 4cm',
-        price: 'R$ 22,00'
-    },
-    {
-        image: '',
-        describe: 'Mini ecobag de 4cm',
-        price: 'R$ 22,00'
+        image: images.quadroPersonalizado,
+        describe: 'Quadro com bordado personalizado',
+        price: 'R$ 100,00'
     }
 ]
 
@@ -80,8 +99,8 @@ export const products = [
         list: ecobag
     },
     {
-        name: 'necessaire',
-        list: necessaire
+        name: 'camisetas',
+        list: camisetas
     },
     {
         name: 'quadros',
