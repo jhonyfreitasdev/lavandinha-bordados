@@ -3,7 +3,7 @@ import "../../assets/styles/fonts.css"
 
 const ProductButton = styled.button `
     position: absolute;
-    right: 5%;
+    right: 2%;
     top: 13px;
     background: linear-gradient(to bottom, #756A8B, #BEA7C8);
     color: #FFFFFF;
@@ -20,7 +20,7 @@ const ProductList = styled.ul `
     background-color: #756A8B55;
     display: none;
     position: absolute;
-    right: 6.5%;
+    right: 3.5%;
     top: 48px;
     border-radius: 5px;
     padding: 5px 15px;
