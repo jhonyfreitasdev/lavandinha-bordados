@@ -6,6 +6,7 @@ const HeaderContainer = styled.header`
     flex-direction: column;
     justify-content: center;
     background-color: #D5C3DD;
+    box-shadow: 0 10px 10px 2px #00000026;
     max-width: 1440px;
     margin: 0 auto;
 `

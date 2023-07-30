@@ -6,6 +6,7 @@ const Container = styled.div `
     justify-content: center;
     align-items: flex-start;
     background-color: #D5C3DD;
+    box-shadow: 0 10px 10px 2px #00000026;
     margin: 0 auto;
     padding: 100px 0;
     min-height: 69vh;

@@ -24,7 +24,7 @@ export const SelectButton = () => {
                 <Product > <button type="button" id="chaveirinhos"> Chaveirinhos </button> </Product>
                 <Product > <button type="button" id="bastidores"> Bastidores </button> </Product>
                 <Product > <button type="button" id="ecobag"> Ecobag </button> </Product>
-                <Product > <button type="button" id="necessaire"> Necessaire </button> </Product>
+                <Product > <button type="button" id="camisetas"> Camisetas </button> </Product>
                 <Product > <button type="button" id="quadros"> Quadros </button> </Product>
             </ProductList>
         </>

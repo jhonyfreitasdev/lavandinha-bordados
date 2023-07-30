@@ -4,11 +4,12 @@ const Container = styled.div `
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 68px;
+    gap: 90px;
 `
 
-const ContainerList = styled.div `
+const ContainerList = styled.div `    
     text-align: center;
+    width: 90%;
 `
 
 const Title = styled.h3`
@@ -22,18 +23,22 @@ const Title = styled.h3`
 
 const List = styled.ul `
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 100px;
+    gap: 68px 90px;
 `
 
 const Item = styled.li `
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    justify-content: space-between;
     align-items: center;
+    flex-basis: 1;
+    gap: 7px;
     font-family: 'Hatton', Arial;
     color: #FFFFFF;
     font-weight: 600;
+    width: 260px;
 `
 
 const ImageDiv = styled.div `
@@ -48,6 +53,7 @@ const ImageDiv = styled.div `
 
 const Describe = styled.p `
     font-size: 26px;
+    text-align: center;
 `
 
 const Price = styled.p `

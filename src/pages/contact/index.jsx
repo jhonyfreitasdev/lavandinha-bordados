@@ -1,13 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { images } from '../../objects/images/index.js';
 import { Container, Logo, Title, Text, List, Icon, Image } from "./style.jsx";
-import ImageContact from "../../assets/images/image-contact.png";
 
 export const Contact = () => {
     return (
         <Container>
-            <Logo src="" alt="Imagem do logo" />
+            <Logo src={images.logoSmall} alt="Imagem do logo" />
 
             <Title>  Contato </Title>
             <Text>Gostou de algum dos nossos produtos?<br /> Entre em contato com a gente, será um prazer te atender!</Text>
@@ -15,26 +15,26 @@ export const Contact = () => {
             <address>
                 <List>
                     <Icon>
-                        <a href="#">
+                        <a href="https://contate.me/lavandinhabordados" target='_blank'>
                             <FontAwesomeIcon icon={faWhatsapp} />
                         </a>
                     </Icon>
 
                     <Icon>
-                        <a href="#">
+                        <a href="https://instagram.com/lavandinhabordados?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" target='_blank'>
                             <FontAwesomeIcon icon={faInstagram} />
                         </a>
                     </Icon>
 
                     <Icon>
-                        <a href="#">
+                        <a href="# " target='_blank'>
                             <FontAwesomeIcon icon={faEnvelope} />
                         </a>
                     </Icon>
                 </List>
             </address>
 
-            <Image src={ImageContact} alt="Imagem animada da criadora" />
+            <Image src={images.avatarContact} alt="Imagem animada da criadora" />
         </Container>
     )
 }

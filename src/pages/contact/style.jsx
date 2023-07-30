@@ -7,17 +7,18 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     background-color: #D5C3DD;
     font-family: 'Hatton';
+    box-shadow: 0 10px 10px 2px #00000026;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 55px 0;
     min-height: 69vh;
     max-width: 1440px;
 `
 
 const Logo = styled.img`
-
+    width: 65px;
 `
 
 const Title = styled.h2`
@@ -50,7 +51,7 @@ const Icon = styled.li`
 
 const Image = styled.img`
     position: absolute;
-    top: 15%;
+    top: 17%;
     right: 30px;
     width: 280px;
 `

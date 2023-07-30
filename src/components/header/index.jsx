@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { FilterContext } from "../../context/filter-products";
-import LogoImage from "../../assets/images/logo.png"
+import { ShoppingCart } from "../shopping-cart";
 import { HeaderContainer, LogoContainer, Logo, Title, Navigation, List, Item } from "./style";
+import { images } from "../../objects/images";
 
 export const Header = () => {
     const { setFilteredProductName } = useContext(FilterContext)
@@ -10,11 +11,14 @@ export const Header = () => {
     return (
         <HeaderContainer>
             <LogoContainer>
-                <Logo src={LogoImage} alt="Imagem do logo" />
+                <Logo src={images.logo} alt="Imagem do logo" />
+
                 <Title>
                     <span >Lavandinha</span> <br />
                     bordados
                 </Title>
+
+                <ShoppingCart />
             </LogoContainer>
 
             <Navigation>
