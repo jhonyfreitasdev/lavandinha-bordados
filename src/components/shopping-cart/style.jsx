@@ -54,6 +54,7 @@ const CloseIcon = styled(FontAwesomeIcon)`
 const Title = styled.h2`
     color: #756A8B;
     font-family: 'Hatton', Arial; 
+    font-size: 30px;
     font-weight: 600;
     margin-bottom: 30px;
 `

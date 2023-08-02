@@ -2,6 +2,7 @@ import { useContext, useState } from "react"
 import { CartContext } from "../../context/cart"
 import { faCartShopping, faXmark } from "@fortawesome/free-solid-svg-icons"
 import { CartButton, CartIcon, CounterProducts, CartList, CloseIcon, Title, List, ListItem, ImageDiv, Describe, DivButton, TotalPrice, BuyButton } from "./style"
+import { EmptyCart } from "../empty"
 
 export const ShoppingCart = () => {
     const [statusCartBar, setStatusCartBar] = useState(false)
@@ -55,37 +56,42 @@ export const ShoppingCart = () => {
 
                 <Title>Carrinho de compras</Title>
 
-                <List>
-                    {cartList.map((item, index) => {
-                        return (
-                            item.quantity >= 1 ?
-                                <ListItem key={index}>
-                                    <ImageDiv>
-                                        <img src={item.image} alt="imagem do produto" />
-                                    </ImageDiv>
+                {cartList.length === 0 ?
+                    <EmptyCart />
 
-                                    <Describe> {item.describe} </Describe>
-                                    <p> {formattedPrice(item.totalPrice)} </p>
+                    : <List>
+                        {cartList.map((item, index) => {
+                            return (
+                                item.quantity >= 1 ?
+                                    <ListItem key={index}>
+                                        <ImageDiv>
+                                            <img src={item.image} alt="imagem do produto" />
+                                        </ImageDiv>
 
-                                    <DivButton>
-                                        <button type="button" onClick={() => removeProduct(item)}> - </button>
+                                        <Describe> {item.describe} </Describe>
+                                        <p> {formattedPrice(item.totalPrice)} </p>
 
-                                        <p> {item.quantity} </p>
+                                        <DivButton>
+                                            <button type="button" onClick={() => removeProduct(item)}> - </button>
 
-                                        <button type="button" onClick={() => addProduct(item)}> + </button>
-                                    </DivButton>
-                                </ListItem>
-                                : ""
-                        )
-                    })}
-                </List>
+                                            <p> {item.quantity} </p>
+
+                                            <button type="button" onClick={() => addProduct(item)}> + </button>
+                                        </DivButton>
+                                    </ListItem>
+                                    : ""
+                            )
+                        })}
+                    </List>
+                }
 
                 {totalPrice !== 0 ?
                     <TotalPrice>
                         <p>Total</p>
                         <p> {formattedPrice(totalPrice)} </p>
                     </TotalPrice>
-                    : ""}
+                    : ""
+                }
 
                 <BuyButton type="button"> Faça sua encomenda </BuyButton>
             </CartList>
