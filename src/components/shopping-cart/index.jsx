@@ -7,18 +7,14 @@ export const ShoppingCart = () => {
     const [statusCartBar, setStatusCartBar] = useState(false)
     const { cartList, setCartList } = useContext(CartContext)
 
-    const quantityList = cartList.map(product => product.quantity)
     let totalQuantity = 0
-
-    for (let i = 0; i < quantityList.length; i++) {
-        totalQuantity += quantityList[i];
+    for (let i = 0; i < cartList.length; i++) {
+        totalQuantity += cartList[i].quantity;
     }
 
-    const priceList = cartList.map(product => product.totalPrice)
     let totalPrice = 0
-
-    for (let i = 0; i < priceList.length; i++) {
-        totalPrice += priceList[i];
+    for (let i = 0; i < cartList.length; i++) {
+        totalPrice += cartList[i].totalPrice;
     }
 
     const formattedPrice = value => value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
@@ -84,12 +80,12 @@ export const ShoppingCart = () => {
                     })}
                 </List>
 
-                {totalPrice !==0 ?
+                {totalPrice !== 0 ?
                     <TotalPrice>
                         <p>Total</p>
                         <p> {formattedPrice(totalPrice)} </p>
                     </TotalPrice>
-                : ""}
+                    : ""}
 
                 <BuyButton type="button"> Faça sua encomenda </BuyButton>
             </CartList>

@@ -61,6 +61,7 @@ const Title = styled.h2`
 const List = styled.ul`
     overflow: auto;
     height: 500px;
+    margin-bottom: 20px;
 `
 
 const ListItem = styled.li`
@@ -116,6 +117,7 @@ const TotalPrice = styled.div `
     font-family: 'Hatton', Arial;
     font-size: 20px;
     font-weight: 600;
+    padding: 5px;
 `
 
 const BuyButton = styled.button` 
@@ -130,6 +132,7 @@ const BuyButton = styled.button`
     font-weight: 600;
     border-radius: 30px;
     box-shadow: 1px 0 25px 2px #00000014;
+    cursor: pointer;
     padding: 7px 12px;
     width: 200px;
 `
