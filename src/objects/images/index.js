@@ -16,6 +16,8 @@ import avatarAbout from '../../assets/images/image-about.png';
 import avatarContact from '../../assets/images/image-contact.png';
 import logo from '../../assets/images/logo.png';
 import logoSmall from '../../assets/images/logo-small.png';
+import emptyCart from '../../assets/images/empty-cart.png';
+
 
 export const images = {
     chaveiroPet,
@@ -35,5 +37,6 @@ export const images = {
     avatarAbout,
     avatarContact,
     logo,
-    logoSmall
+    logoSmall,
+    emptyCart
 }
