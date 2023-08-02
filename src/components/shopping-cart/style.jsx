@@ -66,6 +66,7 @@ const List = styled.ul`
 `
 
 const ListItem = styled.li`
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -110,6 +111,16 @@ const DivButton = styled.div`
     }
 `
 
+const BtnRemoveItem = styled.button `
+    position: absolute;
+    top: 1px;
+    right: 6px;
+    background-color: #00000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    cursor: pointer;
+`
+
 const TotalPrice = styled.div `
     display: flex;
     justify-content: space-between;
@@ -138,4 +149,4 @@ const BuyButton = styled.button`
     width: 200px;
 `
 
-export { CartButton, CartIcon, CounterProducts, CartList, CloseIcon, Title, List, ListItem, ImageDiv, Describe, DivButton, TotalPrice, BuyButton }
+export { CartButton, CartIcon, CounterProducts, CartList, CloseIcon, Title, List, ListItem, ImageDiv, Describe, DivButton, BtnRemoveItem, TotalPrice, BuyButton }

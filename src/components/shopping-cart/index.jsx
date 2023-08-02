@@ -1,7 +1,7 @@
 import { useContext, useState } from "react"
 import { CartContext } from "../../context/cart"
 import { faCartShopping, faXmark } from "@fortawesome/free-solid-svg-icons"
-import { CartButton, CartIcon, CounterProducts, CartList, CloseIcon, Title, List, ListItem, ImageDiv, Describe, DivButton, TotalPrice, BuyButton } from "./style"
+import { CartButton, CartIcon, CounterProducts, CartList, CloseIcon, Title, List, ListItem, ImageDiv, Describe, DivButton, BtnRemoveItem, TotalPrice, BuyButton } from "./style"
 import { EmptyCart } from "../empty"
 
 export const ShoppingCart = () => {
@@ -44,6 +44,12 @@ export const ShoppingCart = () => {
         setCartList(updatedCartList);
     }
 
+    const removeProductFromCart = (item) => {
+        const updatedCartList = cartList.filter(product => product.id !== item.id);
+
+        setCartList(updatedCartList);
+    }
+
     return (
         <>
             <CartButton onClick={() => { setStatusCartBar(true) }}>
@@ -78,6 +84,8 @@ export const ShoppingCart = () => {
 
                                             <button type="button" onClick={() => addProduct(item)}> + </button>
                                         </DivButton>
+
+                                        <BtnRemoveItem type="button" onClick={() => removeProductFromCart(item)}> X </BtnRemoveItem>
                                     </ListItem>
                                     : ""
                             )
