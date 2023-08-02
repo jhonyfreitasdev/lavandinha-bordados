@@ -3,16 +3,19 @@ import { createGlobalStyle } from "styled-components";
 import { AppRoutes } from "./routes/route";
 import { Header } from "./components/header";
 import { FilterProvider } from "./context/filter-products";
+import { CartProvider } from "./context/cart";
 
 export const App = () => {
 	return (
 		<FilterProvider>
-			<GlobalStyle />
+			<CartProvider>
+				<GlobalStyle />
 
-			<BrowserRouter>
-				<Header />
-				<AppRoutes />
-			</BrowserRouter>
+				<BrowserRouter>
+					<Header />
+					<AppRoutes />
+				</BrowserRouter>
+			</CartProvider>
 		</FilterProvider>
 	);
 }
