@@ -1,35 +1,97 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { CartContext } from "../../context/cart"
 import { faCartShopping, faXmark } from "@fortawesome/free-solid-svg-icons"
-import { CartButton, CartIcon, CounterProducts, CartList, CloseIcon, DivButton } from "./style"
+import { CartButton, CartIcon, CounterProducts, CartList, CloseIcon, Title, List, ListItem, ImageDiv, Describe, DivButton, TotalPrice, BuyButton } from "./style"
 
 export const ShoppingCart = () => {
     const [statusCartBar, setStatusCartBar] = useState(false)
+    const { cartList, setCartList } = useContext(CartContext)
+
+    const quantityList = cartList.map(product => product.quantity)
+    let totalQuantity = 0
+
+    for (let i = 0; i < quantityList.length; i++) {
+        totalQuantity += quantityList[i];
+    }
+
+    const priceList = cartList.map(product => product.totalPrice)
+    let totalPrice = 0
+
+    for (let i = 0; i < priceList.length; i++) {
+        totalPrice += priceList[i];
+    }
+
+    const formattedPrice = value => value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+
+    const addProduct = (item) => {
+        const updatedCartList = cartList.map(product => {
+            if (product.id === item.id) {
+                return { ...product, quantity: product.quantity + 1, totalPrice: (product.quantity + 1) * product.price };
+            } else {
+                return product;
+            }
+        });
+
+        setCartList(updatedCartList);
+    }
+
+    const removeProduct = (item) => {
+        const updatedCartList = cartList.map(product => {
+            if (product.id === item.id) {
+                return { ...product, quantity: product.quantity - 1, totalPrice: (product.quantity - 1) * product.price };
+            } else {
+                return product;
+            }
+        });
+
+        setCartList(updatedCartList);
+    }
 
     return (
         <>
-            <CartButton onClick={() => {setStatusCartBar(true)}}>
+            <CartButton onClick={() => { setStatusCartBar(true) }}>
                 <CartIcon icon={faCartShopping} fade />
-                <CounterProducts> 0 </CounterProducts>
+                <CounterProducts> {totalQuantity} </CounterProducts>
             </CartButton>
 
             <CartList id={statusCartBar === true ? 'open' : 'close'}>
-                <CloseIcon icon={faXmark} onClick={() => {setStatusCartBar(false)}}/>
+                <CloseIcon icon={faXmark} onClick={() => { setStatusCartBar(false) }} />
 
-                <h2>Carrinho de compras</h2>
-                
-                <ul>
-                    <li>
-                        <img src="" alt="imagem do produto" />
-                        <p>descrição</p>
-                        <p>preço</p>
+                <Title>Carrinho de compras</Title>
 
-                        <DivButton>
-                            <button>-</button>
-                            <p>0</p>
-                            <button>+</button>
-                        </DivButton>
-                    </li>
-                </ul>
+                <List>
+                    {cartList.map((item, index) => {
+                        return (
+                            item.quantity >= 1 ?
+                                <ListItem key={index}>
+                                    <ImageDiv>
+                                        <img src={item.image} alt="imagem do produto" />
+                                    </ImageDiv>
+
+                                    <Describe> {item.describe} </Describe>
+                                    <p> {formattedPrice(item.totalPrice)} </p>
+
+                                    <DivButton>
+                                        <button type="button" onClick={() => removeProduct(item)}> - </button>
+
+                                        <p> {item.quantity} </p>
+
+                                        <button type="button" onClick={() => addProduct(item)}> + </button>
+                                    </DivButton>
+                                </ListItem>
+                                : ""
+                        )
+                    })}
+                </List>
+
+                {totalPrice !==0 ?
+                    <TotalPrice>
+                        <p>Total</p>
+                        <p> {formattedPrice(totalPrice)} </p>
+                    </TotalPrice>
+                : ""}
+
+                <BuyButton type="button"> Faça sua encomenda </BuyButton>
             </CartList>
         </>
     )

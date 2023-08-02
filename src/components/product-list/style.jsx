@@ -67,6 +67,19 @@ const Button = styled.button `
     font-family: 'Hatton', Arial;
     font-weight: 600;
     border-radius: 10px;
+    cursor: pointer;
     padding: 5px;
 `
-export { Container, ContainerList, Title, List, Item, ImageDiv, Describe, Price, Button }
+
+const ButtonWhatsApp = styled.a ` 
+    background: linear-gradient(45deg, #756A8B, #BEA7C8);
+    color: #FFFFFF;
+    font-family: 'Hatton', Arial;
+    font-weight: 600;
+    font-size: 17px;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 5px 9px;
+` 
+
+export { Container, ContainerList, Title, List, Item, ImageDiv, Describe, Price, Button, ButtonWhatsApp }

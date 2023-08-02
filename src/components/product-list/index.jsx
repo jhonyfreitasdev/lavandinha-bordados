@@ -1,7 +1,30 @@
+import { useContext } from "react";
+import { CartContext } from "../../context/cart";
 import { products } from "../../objects/products";
-import { Container, ContainerList, Title, List, Item, ImageDiv, Describe, Price, Button } from "./style";
+import { Container, ContainerList, Title, List, Item, ImageDiv, Describe, Price, Button, ButtonWhatsApp } from "./style";
 
 export const ProductList = () => {
+    const { cartList, setCartList } = useContext(CartContext)
+
+    const formattedPrice = value => value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+
+    const addProductToCart = (item) => {
+        const existingItem = cartList.find(product => product.id === item.id);
+    
+        if (existingItem) {
+            const updatedCartList = cartList.map(product => {
+                if (product.id === item.id) {
+                    return { ...product, quantity: product.quantity + 1, totalPrice: (product.quantity + 1) * product.price };
+                } else {
+                    return product;
+                }                    
+            });
+    
+            setCartList(updatedCartList);
+        } else {
+            setCartList([...cartList, { ...item, quantity: 1, totalPrice: item.price }]);
+        }
+    };
 
     return (
         <Container>
@@ -19,8 +42,8 @@ export const ProductList = () => {
                                             <img src={item.image} alt="Imagem do produto" />
                                         </ImageDiv>
                                         <Describe> {item.describe} </Describe>
-                                        <Price> {item.price} </Price>
-                                        <Button type="button" > Adicionar ao carrinho </Button>
+                                        <Price> {formattedPrice(item.price)} </Price>
+                                        <Button type="button" onClick={() => addProductToCart(item)} > Adicionar ao carrinho </Button>
                                     </Item>
                                 )
                             })}
@@ -28,6 +51,10 @@ export const ProductList = () => {
                     </ContainerList>
                 )
             })}
+
+            <ButtonWhatsApp href="https://contate.me/lavandinhabordados" target="_blank">
+                Não encontrou o que procura? Faça sua encomenda personalizada
+            </ButtonWhatsApp>
         </Container>
     )
 }
