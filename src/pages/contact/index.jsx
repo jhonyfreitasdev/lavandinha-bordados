@@ -15,7 +15,7 @@ export const Contact = () => {
             <address>
                 <List>
                     <Icon>
-                        <a href="https://wa.me/11997127406" target='_blank' rel='noreferrer'>
+                        <a href="https://wa.me/+5511997127406" target='_blank' rel='noreferrer'>
                             <FontAwesomeIcon icon={faWhatsapp} />
                         </a>
                     </Icon>

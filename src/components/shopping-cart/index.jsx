@@ -64,7 +64,7 @@ export const ShoppingCart = () => {
 
     const message = getMessage()
     const messageCoding = encodeURIComponent(message);
-    const whatsAppLink = `https://wa.me/11997127406?text=${messageCoding}`
+    const whatsAppLink = `https://wa.me/+5511997127406?text=${messageCoding}`
 
     return (
         <>
