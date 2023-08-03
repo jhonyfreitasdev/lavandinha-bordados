@@ -2,12 +2,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { styled } from "styled-components";
 
 const CartButton = styled.div`
-    position: absolute;
-    right: 8%;
-    top: 50%;
+    position: fixed;
+    right: 7%;
+    top: 14%;
+    z-index: 1;
     transform: translateY(-50%);
     display: flex;
     align-items: center;
+    background-color: #FFFFFF;
     border: 1px solid #80808055;
     border-radius: 15px;
     box-shadow: 0 0 10px 2px #00000016;
@@ -132,7 +134,7 @@ const TotalPrice = styled.div `
     padding: 5px;
 `
 
-const BuyButton = styled.button` 
+const BuyButton = styled.a` 
     position: absolute;
     bottom: 5%;
     right: 50%;
@@ -147,6 +149,11 @@ const BuyButton = styled.button`
     cursor: pointer;
     padding: 7px 12px;
     width: 200px;
+
+    &[id= 'disable'] {
+        pointer-events: none;
+    background: linear-gradient(to right, #756A8B50, #BEA7C850);
+    }
 `
 
 export { CartButton, CartIcon, CounterProducts, CartList, CloseIcon, Title, List, ListItem, ImageDiv, Describe, DivButton, BtnRemoveItem, TotalPrice, BuyButton }

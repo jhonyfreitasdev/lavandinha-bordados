@@ -52,7 +52,7 @@ export const ProductList = () => {
                 )
             })}
 
-            <ButtonWhatsApp href="https://contate.me/lavandinhabordados" target="_blank">
+            <ButtonWhatsApp href="https://wa.me/11997127406?text=Olá! Eu gostaria de fazer uma encomenda personalizada." target="_blank">
                 Não encontrou o que procura? Faça sua encomenda personalizada
             </ButtonWhatsApp>
         </Container>

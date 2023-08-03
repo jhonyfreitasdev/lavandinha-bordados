@@ -50,6 +50,22 @@ export const ShoppingCart = () => {
         setCartList(updatedCartList);
     }
 
+    const getMessage = () => {
+        let message = "Olá! Eu gostaria de encomendar esses produtos:\n\n"
+
+        cartList.forEach(product => {
+            message += `- ${product.quantity} ${product.describe}\n`
+        })
+
+        message += `\n Total: ${formattedPrice(totalPrice)}`
+
+        return message
+    }
+
+    const message = getMessage()
+    const messageCoding = encodeURIComponent(message);
+    const whatsAppLink = `https://wa.me/11997127406?text=${messageCoding}`
+
     return (
         <>
             <CartButton onClick={() => { setStatusCartBar(true) }}>
@@ -98,10 +114,13 @@ export const ShoppingCart = () => {
                         <p>Total</p>
                         <p> {formattedPrice(totalPrice)} </p>
                     </TotalPrice>
+
                     : ""
                 }
 
-                <BuyButton type="button"> Faça sua encomenda </BuyButton>
+                <BuyButton id={cartList.length > 0 ? 'able' : 'disable'} href={whatsAppLink} target="_blank">
+                    Faça sua encomenda
+                </BuyButton>
             </CartList>
         </>
     )
