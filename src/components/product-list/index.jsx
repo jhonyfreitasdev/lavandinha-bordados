@@ -43,8 +43,10 @@ export const ProductList = () => {
                                         <ImageDiv>
                                             <img src={item.image} alt="Imagem do produto" />
                                         </ImageDiv>
+                                        
                                         <Describe> {item.describe} </Describe>
                                         <Price> {formattedPrice(item.price)} </Price>
+
                                         <Button type="button" onClick={() => addProductToCart(item)} > Adicionar ao carrinho </Button>
                                     </Item>
                                 )
