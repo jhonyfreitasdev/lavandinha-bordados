@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { images } from '../../objects/images/index.js';
+import { images } from '../../objects/images';
 import { Container, Logo, Title, Text, List, Icon, Image } from "./style.jsx";
 
 export const Contact = () => {
