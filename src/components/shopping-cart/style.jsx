@@ -177,7 +177,7 @@ const TotalPrice = styled.div `
 
 const BuyButton = styled.a` 
     position: absolute;
-    bottom: 3%;
+    top: 90%;
     right: 50%;
     transform: translateX(50%);
     background: linear-gradient(to right, #756A8B, #BEA7C8);
@@ -192,7 +192,7 @@ const BuyButton = styled.a`
     width: 200px;
 
     @media ${device.mobileL} {
-        bottom: 10%;   
+        top: 690px;
     }
     @media ${device.mobileM} {
         font-size: 17px;
