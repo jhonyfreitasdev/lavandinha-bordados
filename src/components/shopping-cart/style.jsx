@@ -47,7 +47,6 @@ const CounterProducts = styled.p`
 const CartList = styled.div`
     background-color: #FFFFFF;
     position: fixed;
-    display: none;
     right: 0;
     top: 0;
     z-index: 1;
@@ -59,10 +58,6 @@ const CartList = styled.div`
     
     @media ${device.mobileL} {
         width: 100%;
-    }
-    
-    &[id= 'open']{
-        display: block;
     }
 `
 

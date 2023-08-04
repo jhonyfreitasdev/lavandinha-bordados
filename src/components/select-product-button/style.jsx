@@ -30,40 +30,29 @@ const ProductButton = styled.button`
 
 const ProductList = styled.ul`
     background-color: #756A8B70;
-    display: none;
     position: absolute;
     left: 7.5%;
     top: 48px;
     border-radius: 5px;
     padding: 5px 15px;
-
-    &[id= 'activated'] {
-        display: block;
-
-
-        @media ${device.mobileL} {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            gap: 6px;
-            padding: 8px;
-        }
-        @media ${device.mobileM} {
-            padding: 5px;
-        }
-    }   
-
+        
     @media ${device.tablet} {
         left: 9.5%;
     }
     @media ${device.mobileL} {
         left: 6%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 6px;
+        padding: 8px;
         width: 100px;
     }
     @media ${device.mobileM} {
         left: 5%;
         top: 44px;
         font-size: 14px;
+        padding: 5px;
         width: 90px;
     }
 `

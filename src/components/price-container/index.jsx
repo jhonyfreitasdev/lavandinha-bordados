@@ -3,8 +3,6 @@ import { CartContext } from '../../context/cart'
 import { Container,  DivButton } from './style'
 
 export const PriceContainer = ({item}) => {
-    console.log(item);
-
     const { cartList, setCartList } = useContext(CartContext)         
 
     const formattedPrice = value => value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
