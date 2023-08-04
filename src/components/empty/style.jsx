@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { device } from "../../objects/device";
 
 const Container = styled.div ` 
     position: absolute;
@@ -13,10 +14,18 @@ const Text = styled.p `
     font-family: 'Hatton', Arial;
     font-size: 25px;
     font-weight: 600;
+
+    @media ${device.mobileM} {
+        font-size: 22px;
+    }
 `
 
 const Image = styled.img `
     width: 85px;
+
+    @media ${device.mobileM} {
+        width: 70px;
+    }
 `
 
 export { Container, Text, Image }

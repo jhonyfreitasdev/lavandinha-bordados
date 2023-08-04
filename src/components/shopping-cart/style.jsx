@@ -1,10 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { styled } from "styled-components";
+import { device } from "../../objects/device";
 
 const CartButton = styled.div`
     position: fixed;
     right: 7%;
-    top: 14%;
+    top: 12%;
     z-index: 1;
     transform: translateY(-50%);
     display: flex;
@@ -15,16 +16,32 @@ const CartButton = styled.div`
     box-shadow: 0 0 10px 2px #00000016;
     cursor: pointer;
     padding: 6px;
+
+    @media ${device.mobileL} {
+        top: 37%;
+    }
+    @media ${device.mobileM} {
+        top: 36%;
+        padding: 5px 6px;
+    }
 `
 
 const CartIcon = styled(FontAwesomeIcon)` 
     font-size: 20px;
+
+    @media ${device.mobileM} {
+        font-size: 17px;
+    }
 `
 
 const CounterProducts = styled.p` 
     display: inline-block;
     border-radius: 50%;
     padding: 2px 6px;
+
+    @media ${device.mobileM} {
+        font-size: 14px;
+    }
 `
 
 const CartList = styled.div`
@@ -37,9 +54,13 @@ const CartList = styled.div`
     border: 1px solid #80808055;
     box-shadow: 0 0 10px 2px #00000016;
     width: 370px;
-    min-height: 750px;
-    padding: 17px;
-
+    height: 100vh;
+    padding: 17px 17px 35px 17px;
+    
+    @media ${device.mobileL} {
+        width: 100%;
+    }
+    
     &[id= 'open']{
         display: block;
     }
@@ -47,8 +68,8 @@ const CartList = styled.div`
 
 const CloseIcon = styled(FontAwesomeIcon)`
     position: absolute;
-    right: 26px;
-    top: 18px;
+    top: 12px;
+    right: 21px;
     font-size: 25px;
     cursor: pointer;
 `
@@ -58,13 +79,18 @@ const Title = styled.h2`
     font-family: 'Hatton', Arial; 
     font-size: 30px;
     font-weight: 600;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    
+    @media ${device.mobileM} {
+        font-size: 26px;
+        margin-top: 10px;
+    }
 `
 
 const List = styled.ul`
     overflow: auto;
-    height: 500px;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
+    height: 460px;
 `
 
 const ListItem = styled.li`
@@ -75,6 +101,7 @@ const ListItem = styled.li`
     background-color: #D5C3DD;
     border-radius: 10px;
     margin: 15px 0;
+    padding: 7px;
 `
 
 const ImageDiv = styled.div`
@@ -91,6 +118,14 @@ const Describe = styled.p`
     max-width: 90px;
 `
 
+const ContainerPrice = styled.div ` 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+`
+
 const DivButton = styled.div`
     display: flex;
     align-items: center;
@@ -99,7 +134,6 @@ const DivButton = styled.div`
     border-radius: 10px;
     box-shadow: 0 0 10px 2px #00000016;
     padding: 6px;
-    margin-right: 7px;
 
     button {
         background-color: #00000000;
@@ -113,14 +147,17 @@ const DivButton = styled.div`
     }
 `
 
-const BtnRemoveItem = styled.button `
+const BtnRemoveItem = styled(FontAwesomeIcon)`
     position: absolute;
-    top: 1px;
-    right: 6px;
-    background-color: #00000000;
+    top: -5px;
+    right: 0;
+    background-color: #756A8B;
+    color: #FFFFFF;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px;
+    font-size: 15px;
+    border-radius: 50%;
     cursor: pointer;
+    padding: 4px;
 `
 
 const TotalPrice = styled.div `
@@ -136,7 +173,7 @@ const TotalPrice = styled.div `
 
 const BuyButton = styled.a` 
     position: absolute;
-    bottom: 5%;
+    bottom: 1%;
     right: 50%;
     transform: translateX(50%);
     background: linear-gradient(to right, #756A8B, #BEA7C8);
@@ -150,10 +187,16 @@ const BuyButton = styled.a`
     padding: 7px 12px;
     width: 200px;
 
+    @media ${device.mobileM} {
+        font-size: 17px;
+        width: 170px;
+        padding: 5px;
+    }
+
     &[id= 'disable'] {
         pointer-events: none;
-    background: linear-gradient(to right, #756A8B50, #BEA7C850);
+        background: linear-gradient(to right, #756A8B50, #BEA7C850);
     }
 `
 
-export { CartButton, CartIcon, CounterProducts, CartList, CloseIcon, Title, List, ListItem, ImageDiv, Describe, DivButton, BtnRemoveItem, TotalPrice, BuyButton }
+export { CartButton, CartIcon, CounterProducts, CartList, CloseIcon, Title, List, ListItem, ImageDiv, Describe, ContainerPrice, DivButton, BtnRemoveItem, TotalPrice, BuyButton }

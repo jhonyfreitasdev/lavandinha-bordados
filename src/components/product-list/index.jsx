@@ -10,16 +10,16 @@ export const ProductList = () => {
 
     const addProductToCart = (item) => {
         const existingItem = cartList.find(product => product.id === item.id);
-    
+
         if (existingItem) {
             const updatedCartList = cartList.map(product => {
                 if (product.id === item.id) {
                     return { ...product, quantity: product.quantity + 1, totalPrice: (product.quantity + 1) * product.price };
                 } else {
                     return product;
-                }                    
+                }
             });
-    
+
             setCartList(updatedCartList);
         } else {
             setCartList([...cartList, { ...item, quantity: 1, totalPrice: item.price }]);
@@ -52,7 +52,10 @@ export const ProductList = () => {
                 )
             })}
 
-            <ButtonWhatsApp href="https://wa.me/+5511997127406?text=Olá! Eu gostaria de fazer uma encomenda personalizada." target="_blank">
+            <ButtonWhatsApp
+                href="https://wa.me/+5511997127406?text=Olá! Eu gostaria de fazer uma encomenda personalizada."
+                target="_blank"
+            >
                 Não encontrou o que procura? Faça sua encomenda personalizada
             </ButtonWhatsApp>
         </Container>

@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { device } from "../../objects/device";
 
 export const Container = styled.div `
     position: relative;
@@ -11,4 +12,8 @@ export const Container = styled.div `
     padding: 60px 0;
     min-height: 69vh;
     max-width: 1440px;
+
+    @media ${device.mobileL} {
+        padding: 80px 0;
+    }
 `

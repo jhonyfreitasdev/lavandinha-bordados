@@ -10,6 +10,8 @@ export const FilteredList = () => {
 
     const filteredProduct = products.find(product => product.name === filteredProductName)
 
+    const formattedPrice = value => value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+
     return (
         <Container>
 
@@ -23,7 +25,7 @@ export const FilteredList = () => {
                                 <img src={product.image} alt="Imagem do produto" />
                             </ImageDiv>
                             <Describe> {product.describe} </Describe>
-                            <Price> {product.price} </Price>
+                            <Price> {formattedPrice(product.price)} </Price>
                             <Button type="button" > Adicionar ao carrinho </Button>
                         </Item>
                     )
