@@ -4,7 +4,7 @@ import { device } from "../../objects/device";
 
 const ProductButton = styled.button`
     position: absolute;
-    right: 2%;
+    left: 6%;
     top: 13px;
     background: linear-gradient(to bottom, #756A8B, #BEA7C8);
     color: #FFFFFF;
@@ -32,13 +32,14 @@ const ProductList = styled.ul`
     background-color: #756A8B70;
     display: none;
     position: absolute;
-    right: 3.5%;
+    left: 7.5%;
     top: 48px;
     border-radius: 5px;
     padding: 5px 15px;
 
     &[id= 'activated'] {
         display: block;
+
 
         @media ${device.mobileL} {
             display: flex;
@@ -47,11 +48,14 @@ const ProductList = styled.ul`
             gap: 6px;
             padding: 8px;
         }
-        @media ${device.mobileL} {
+        @media ${device.mobileM} {
             padding: 5px;
         }
     }   
 
+    @media ${device.tablet} {
+        left: 9.5%;
+    }
     @media ${device.mobileL} {
         left: 6%;
         width: 100px;
