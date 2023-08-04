@@ -9,11 +9,11 @@ export const Container = styled.div `
     box-shadow: 0 10px 10px 2px #00000026;
     background-color: #D5C3DD;
     margin: 0 auto;
-    padding: 60px 0;
+    padding-top: 60px;
     min-height: 69vh;
     max-width: 1440px;
 
     @media ${device.mobileL} {
-        padding: 80px 0;
+        padding-top: 80px;
     }
 `

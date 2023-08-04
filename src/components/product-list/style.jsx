@@ -128,24 +128,35 @@ const Button = styled.button `
     }
 `
 
-const ButtonWhatsApp = styled.a ` 
-    background: linear-gradient(45deg, #756A8B, #BEA7C8);
+const ButtonWhatsApp = styled.div ` 
+    background: linear-gradient(to bottom, #756A8B70, #BEA7C8);
     color: #FFFFFF;
     font-family: 'Hatton', Arial;
     font-weight: 600;
     font-size: 17px;
     text-align: center;
-    border-radius: 15px;
-    cursor: pointer;
-    padding: 5px 9px;
+    padding: 30px 15px 15px 15px;
+    width: 100%;
 
     @media ${device.mobileL} {
-        width: 85%;
         font-size: 16px;
+        padding: 12px;
     }
     @media ${device.mobileM} {
         font-size: 14px;
     }
 ` 
 
-export { Container, ContainerList, Title, List, Item, ImageDiv, Describe, Price, Button, ButtonWhatsApp }
+const Icon = styled.p`
+    font-size: 35px;
+    margin-top: 10px;
+    
+    @media ${device.mobileM} {
+        font-size: 30px;
+    }
+    
+    a{
+        color: #756A8B;
+    }
+`
+export { Container, ContainerList, Title, List, Item, ImageDiv, Describe, Price, Button, ButtonWhatsApp, Icon }

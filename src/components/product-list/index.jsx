@@ -1,7 +1,9 @@
 import { useContext } from "react";
 import { CartContext } from "../../context/cart";
 import { products } from "../../objects/products";
-import { Container, ContainerList, Title, List, Item, ImageDiv, Describe, Price, Button, ButtonWhatsApp } from "./style";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { Container, ContainerList, Title, List, Item, ImageDiv, Describe, Price, Button, ButtonWhatsApp, Icon } from "./style";
 
 export const ProductList = () => {
     const { cartList, setCartList } = useContext(CartContext)
@@ -52,11 +54,16 @@ export const ProductList = () => {
                 )
             })}
 
-            <ButtonWhatsApp
-                href="https://wa.me/+5511997127406?text=Olá! Eu gostaria de fazer uma encomenda personalizada."
-                target="_blank"
-            >
+            <ButtonWhatsApp>
                 Não encontrou o que procura? Faça sua encomenda personalizada
+                <Icon>
+                    <a
+                        href="https://wa.me/+5511997127406?text=Olá! Eu gostaria de fazer uma encomenda personalizada." 
+                        target='_blank'
+                    >
+                        <FontAwesomeIcon icon={faWhatsapp} />
+                    </a>
+                </Icon>
             </ButtonWhatsApp>
         </Container>
     )
