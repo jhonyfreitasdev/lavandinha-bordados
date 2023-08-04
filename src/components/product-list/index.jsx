@@ -63,7 +63,7 @@ export const ProductList = () => {
                         href="https://wa.me/+5511997127406?text=Olá! Eu gostaria de fazer uma encomenda personalizada." 
                         target='_blank'
                     >
-                        <FontAwesomeIcon icon={faWhatsapp} />
+                        <FontAwesomeIcon icon={faWhatsapp} beatFade />
                     </a>
                 </Icon>
             </ButtonWhatsApp>

@@ -18,10 +18,10 @@ const CartButton = styled.div`
     padding: 6px;
 
     @media ${device.mobileL} {
-        top: 37%;
+        top: 32%;
     }
     @media ${device.mobileM} {
-        top: 36%;
+        top: 31%;
         padding: 5px 6px;
     }
 `
@@ -91,6 +91,10 @@ const List = styled.ul`
     overflow: auto;
     margin-bottom: 14px;
     height: 460px;
+    
+    @media ${device.mobileL} {
+        height: 570px;
+    }
 `
 
 const ListItem = styled.li`
@@ -173,7 +177,7 @@ const TotalPrice = styled.div `
 
 const BuyButton = styled.a` 
     position: absolute;
-    bottom: 1%;
+    bottom: 3%;
     right: 50%;
     transform: translateX(50%);
     background: linear-gradient(to right, #756A8B, #BEA7C8);
@@ -187,6 +191,9 @@ const BuyButton = styled.a`
     padding: 7px 12px;
     width: 200px;
 
+    @media ${device.mobileL} {
+        bottom: 5%;   
+    }
     @media ${device.mobileM} {
         font-size: 17px;
         width: 170px;
