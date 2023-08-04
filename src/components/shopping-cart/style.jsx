@@ -192,7 +192,7 @@ const BuyButton = styled.a`
     width: 200px;
 
     @media ${device.mobileL} {
-        bottom: 5%;   
+        bottom: 10%;   
     }
     @media ${device.mobileM} {
         font-size: 17px;
