@@ -1,15 +1,13 @@
 import { useContext } from "react";
 import { CartContext } from "../../context/cart";
+import { ButtonWhats } from "../btn-whatsapp";
 import { products } from "../../objects/products";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { Container, ContainerList, Title, List, Item, ImageDiv, Describe, Price, Button, ButtonWhatsApp, Icon } from "./style";
+import { formattedPrice } from "../../objects/formatted-price";
+import { Container, ContainerList, Title, List, Item, ImageDiv, Describe, Price, Button } from "./style";
 
 export const ProductList = () => {
     const { cartList, setCartList } = useContext(CartContext)
-
-    const formattedPrice = value => value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
-
+    
     const addProductToCart = (item) => {
         const existingItem = cartList.find(product => product.id === item.id);
 
@@ -30,13 +28,13 @@ export const ProductList = () => {
 
     return (
         <Container>
+
             {products.map((product, index) => {
                 return (
                     <ContainerList key={index}>
                         <Title> {product.name} </Title>
 
                         <List>
-
                             {product.list.map((item, index) => {
                                 return (
                                     <Item key={index}>
@@ -56,17 +54,8 @@ export const ProductList = () => {
                 )
             })}
 
-            <ButtonWhatsApp>
-                Não encontrou o que procura? Faça sua encomenda personalizada
-                <Icon>
-                    <a
-                        href="https://wa.me/+5511997127406?text=Olá! Eu gostaria de fazer uma encomenda personalizada." 
-                        target='_blank'
-                    >
-                        <FontAwesomeIcon icon={faWhatsapp} beatFade />
-                    </a>
-                </Icon>
-            </ButtonWhatsApp>
+            <ButtonWhats />
+
         </Container>
     )
 }

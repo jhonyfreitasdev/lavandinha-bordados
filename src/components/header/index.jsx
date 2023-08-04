@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
 import { FilterContext } from "../../context/filter-products";
+import { Link } from "react-router-dom";
 import { ShoppingCart } from "../shopping-cart";
-import { HeaderContainer, LogoContainer, Logo, Title, Navigation, List, Item } from "./style";
 import { images } from "../../objects/images";
+import { HeaderContainer, LogoContainer, Logo, Title, Navigation, List, Item } from "./style";
 
 export const Header = () => {
     const { setFilteredProductName } = useContext(FilterContext)

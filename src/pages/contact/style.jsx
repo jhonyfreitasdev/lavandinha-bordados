@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
-import "../../assets/styles/fonts.css"
 import { device } from "../../objects/device";
+import "../../assets/styles/fonts.css"
 
 const Container = styled.div`
     position: relative;
@@ -55,25 +55,6 @@ const Text = styled.p`
     }
 `
 
-const List = styled.ul`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-`
-
-const Icon = styled.li`
-    font-size: 35px;
-    
-    @media ${device.mobileM} {
-        font-size: 30px;
-    }
-
-    a{
-        color: #756A8B;
-    }
-`
-
 const Image = styled.img`
     position: absolute;
     top: 17%;
@@ -90,4 +71,4 @@ const Image = styled.img`
         width: 170px;
     }
 `
-export { Container, Logo, Title, Text, List, Icon, Image }
+export { Container, Logo, Title, Text, Image }

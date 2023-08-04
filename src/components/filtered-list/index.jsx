@@ -1,17 +1,16 @@
 import { useContext } from "react";
 import { FilterContext } from "../../context/filter-products";
-import { products } from "../../objects/products";
-import { Title, List, Item, ImageDiv, Describe, Price, Button } from "../product-list/style";
-import { Container } from "./style"
 import { CartContext } from "../../context/cart";
-
+import { products } from "../../objects/products";
+import { formattedPrice } from "../../objects/formatted-price";
+import { Container } from "./style"
+import { Title, List, Item, ImageDiv, Describe, Price, Button } from "../product-list/style";
 
 export const FilteredList = () => {
     const { filteredProductName } = useContext(FilterContext)
     const { cartList, setCartList} = useContext(CartContext)
 
     const filteredProduct = products.find(product => product.name === filteredProductName)
-    const formattedPrice = value => value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 
     const addProductToCart = (item) => {
         const existingItem = cartList.find(product => product.id === item.id);
@@ -54,6 +53,7 @@ export const FilteredList = () => {
                     )
                 })}
             </List>
+
         </Container>
     )
 }

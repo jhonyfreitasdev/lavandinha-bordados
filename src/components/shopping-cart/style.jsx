@@ -122,35 +122,6 @@ const Describe = styled.p`
     max-width: 90px;
 `
 
-const ContainerPrice = styled.div ` 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2px;
-`
-
-const DivButton = styled.div`
-    display: flex;
-    align-items: center;
-    font-size: 17px;
-    border: 1px solid #80808055;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 2px #00000016;
-    padding: 6px;
-
-    button {
-        background-color: #00000000;
-        font-size: 17px;
-        padding: 0 2px;
-        cursor: pointer;
-    }
-
-    p {
-        margin: 0 4px;
-    }
-`
-
 const BtnRemoveItem = styled(FontAwesomeIcon)`
     position: absolute;
     top: -5px;
@@ -175,35 +146,4 @@ const TotalPrice = styled.div `
     padding: 5px;
 `
 
-const BuyButton = styled.a` 
-    position: absolute;
-    top: 90%;
-    right: 50%;
-    transform: translateX(50%);
-    background: linear-gradient(to right, #756A8B, #BEA7C8);
-    color: #FFFFFF;
-    font-family: 'Hatton', Arial;
-    font-size: 20px;
-    font-weight: 600;
-    border-radius: 30px;
-    box-shadow: 1px 0 25px 2px #00000014;
-    cursor: pointer;
-    padding: 7px 12px;
-    width: 200px;
-
-    @media ${device.mobileL} {
-        top: 690px;
-    }
-    @media ${device.mobileM} {
-        font-size: 17px;
-        width: 170px;
-        padding: 5px;
-    }
-
-    &[id= 'disable'] {
-        pointer-events: none;
-        background: linear-gradient(to right, #756A8B50, #BEA7C850);
-    }
-`
-
-export { CartButton, CartIcon, CounterProducts, CartList, CloseIcon, Title, List, ListItem, ImageDiv, Describe, ContainerPrice, DivButton, BtnRemoveItem, TotalPrice, BuyButton }
+export { CartButton, CartIcon, CounterProducts, CartList, CloseIcon, Title, List, ListItem, ImageDiv, Describe,BtnRemoveItem, TotalPrice }
