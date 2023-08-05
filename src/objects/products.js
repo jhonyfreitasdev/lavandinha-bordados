@@ -4,13 +4,13 @@ const chaveirinhos = [
     {
         id: 'chaveirinhos 1',
         image: images.chaveiroPet,
-        describe: 'Chaveiro pet personalizado',
+        describe: 'Chaveiro Pet personalizado',
         price: 22.00
     },
     {
         id: 'chaveirinhos 2',
         image: images.chaveiroPet2,
-        describe: 'Chaveiro pet personalizado',
+        describe: 'Chaveiro Pet personalizado',
         price: 22.00
     },
     {

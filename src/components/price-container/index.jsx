@@ -21,15 +21,23 @@ export const PriceContainer = ({item}) => {
     }
 
     const removeProduct = (item) => {
-        const updatedCartList = cartList.map(product => {
-            if (product.id === item.id) {
-                return { ...product, quantity: product.quantity - 1, totalPrice: (product.quantity - 1) * product.price };
-            } else {
-                return product;
-            }
-        });
 
-        setCartList(updatedCartList);
+        if (item.quantity === 1){
+            const updatedCartList = cartList.filter(product => product.id !== item.id);
+            
+            setCartList(updatedCartList);
+        } else {
+            const updatedCartList = cartList.map(product => {
+                if (product.id === item.id) {
+                    return { ...product, quantity: product.quantity - 1, totalPrice: (product.quantity - 1) * product.price };
+                } else {
+                    return product;
+                }
+            });
+
+            setCartList(updatedCartList);
+        }
+
     }
 
     return (
