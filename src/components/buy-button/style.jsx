@@ -25,9 +25,4 @@ export const Button = styled.a`
         width: 170px;
         padding: 5px;
     }
-
-    &[id= 'disable'] {
-        pointer-events: none;
-        background: linear-gradient(to right, #756A8B50, #BEA7C850);
-    }
 `
