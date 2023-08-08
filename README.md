@@ -2,7 +2,7 @@
 Um catalogo de uma loja de bordados.
  
 ## 🔗 Acesso ao projeto
-<a href="https://pokedex-alpha-mauve.vercel.app">Clique aqui para ir para a página</a>
+<a href="https://lavandinha-bordados.vercel.app/">Clique aqui para ir para a página</a>
 
 [<img src="src/assets/gifs/tela.gif">](https://lavandinha-bordados.vercel.app/)
 
