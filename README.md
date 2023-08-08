@@ -4,7 +4,7 @@ Um catalogo de uma loja de bordados.
 ## 🔗 Acesso ao projeto
 <a href="https://pokedex-alpha-mauve.vercel.app">Clique aqui para ir para a página</a>
 
-[<img src="src/_assets/gifs/tela.gif">](https://pokedex-alpha-mauve.vercel.app)
+[<img src="src/assets/gifs/tela.gif">](https://lavandinha-bordados.vercel.app/)
 
 ## Descrição 
 - O cliente pediu um catalogo para sua loja de bordados, fiz uma aplicação em React para mostrar seus produtos e possui também um filtro para buscar somente os produtos desejados.
