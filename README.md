@@ -15,6 +15,7 @@ Um catalogo de uma loja de bordados.
 <div style="display: inline_block"><br>
   <img align="center" alt="React" height="30" width="40" src="src/assets/icons/icon-react.png">
   <img align="center" alt="Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+ <img align="center" alt="Styled" height="30" width="35" src="src/assets/icons/icon-styled.png">
 </div><br/>
 
 - O projeto é uma Single Page Application feita com React.JS juntamente com JavaScript, utiliza o React Router Dom para fazer a navegação entre as páginas e para fazer a interação da aplicação com o carrinho de comprar utilizei o Context API.
