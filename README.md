@@ -1,5 +1,5 @@
 # Lavandinha Bordados
-Um catalogo de uma loja de bordados.
+Um catalogo de uma loja de bordados feito em uma Single Page Application com React e possui um carrinho de compras com integração com o WhatsApp.
  
 ## 🔗 Acesso ao projeto
 <a href="https://lavandinha-bordados.vercel.app/">Clique aqui para ir para a página</a>
