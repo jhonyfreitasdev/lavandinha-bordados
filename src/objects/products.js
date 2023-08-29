@@ -73,6 +73,12 @@ const ecobag = [
         describe: 'Ecobag Flores Azuis',
         price: 56.00
     },
+    {
+        id: 'ecobag 5',
+        image: images.ecobabPatinhoBranco,
+        describe: 'Ecobag Patinho Branco com Bolso',
+        price: 60.00
+    }
 ]
 
 const camisetas = [

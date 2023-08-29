@@ -5,11 +5,12 @@ import chaveiroNSAparecida from '../assets/images/chaveiro-n-s-aparecida.jpeg';
 import chaveiroAbelha from '../assets/images/chaveiro-abelhinha.jpeg';
 import bastidorVenus from '../assets/images/bastidor-venus.jpeg';
 import bastidorCoelha from '../assets/images/bastidor-coelhinha.jpeg';
-import camisetaSaoJose from '../assets/images/camiseta-sao-jose.jpeg';
+import camisetaSaoJose from '../assets/images/camiseta-sao-jose.jpg';
 import camisetaPersonalizada from '../assets/images/camiseta-personalizada.jpeg';
 import quadroPersonalizado from '../assets/images/quadro-com-bordado-personalizado.jpeg';
 import ecobagLibelula from '../assets/images/ecobag-libelula.jpeg';
 import ecobabFloresAlgodao from '../assets/images/ecobag-flores-de-algodao.jpeg';
+import ecobabPatinhoBranco from '../assets/images/ecobag-patinho-branco-com-bolso.jpg';
 import ecobagFloresAzuis from '../assets/images/ecobag-flores-azuis.jpeg';
 import ecobagGatos from '../assets/images/ecobag-gatos-e-arte.jpeg';
 import avatarAbout from '../assets/images/image-about.png';
@@ -32,6 +33,7 @@ export const images = {
     quadroPersonalizado,
     ecobagLibelula,
     ecobabFloresAlgodao,
+    ecobabPatinhoBranco,
     ecobagFloresAzuis,
     ecobagGatos,
     avatarAbout,
