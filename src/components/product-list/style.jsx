@@ -76,6 +76,7 @@ const ImageDiv = styled.div `
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    box-shadow: 0 0 14px 5px #00000020;
     overflow: hidden;
     width: 220px;
     height:220px;    
