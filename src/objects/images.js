@@ -5,8 +5,10 @@ import chaveiroNSAparecida from '../assets/images/chaveiro-n-s-aparecida.jpeg';
 import chaveiroAbelha from '../assets/images/chaveiro-abelhinha.jpeg';
 import bastidorVenus from '../assets/images/bastidor-venus.jpeg';
 import bastidorCoelha from '../assets/images/bastidor-coelhinha.jpeg';
+import bastidorSagradoCoracaoDeJesus from '../assets/images/bastidor-sagrado-coracao-de-jesus.jpg';
 import camisetaSaoJose from '../assets/images/camiseta-sao-jose.jpg';
 import camisetaPersonalizada from '../assets/images/camiseta-personalizada.jpeg';
+import camisetaCarlosAcutis from '../assets/images/camiseta-carlos-acutis.jpg';
 import quadroPersonalizado from '../assets/images/quadro-com-bordado-personalizado.jpeg';
 import ecobagLibelula from '../assets/images/ecobag-libelula.jpeg';
 import ecobabFloresAlgodao from '../assets/images/ecobag-flores-de-algodao.jpeg';
@@ -28,7 +30,9 @@ export const images = {
     chaveiroAbelha,
     bastidorVenus,
     bastidorCoelha,
+    bastidorSagradoCoracaoDeJesus,
     camisetaSaoJose,
+    camisetaCarlosAcutis,
     camisetaPersonalizada,
     quadroPersonalizado,
     ecobagLibelula,

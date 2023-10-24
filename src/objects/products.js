@@ -36,12 +36,18 @@ const chaveirinhos = [
 const bastidores = [
     {
         id: 'bastidor 1',
+        image: images.bastidorSagradoCoracaoDeJesus,
+        describe: 'Bastidor O Sagrado Coração de Jesus - 16cm',
+        price: 110.00
+    },
+    {
+        id: 'bastidor 2',
         image: images.bastidorVenus,
         describe: 'Bastidor Vênus - 16cm',
         price: 54.00
     },
     {
-        id: 'bastidor 2',
+        id: 'bastidor 3',
         image: images.bastidorCoelha,
         describe: 'Bastidor Coelhinha - 16cm',
         price: 54.00
@@ -93,7 +99,13 @@ const camisetas = [
         image: images.camisetaPersonalizada,
         describe: 'Camiseta com bordado personalizado',
         price: 100.00
-    }
+    },
+    {
+        id: 'camiseta 3',
+        image: images.camisetaCarlosAcutis,
+        describe: 'Camiseta Be. Carlos Acutis',
+        price: 100.00
+    },
 ]
 
 const quadros = [
