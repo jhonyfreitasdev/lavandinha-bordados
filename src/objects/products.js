@@ -37,7 +37,7 @@ const bastidores = [
     {
         id: 'bastidor 1',
         image: images.bastidorSagradoCoracaoDeJesus,
-        describe: 'Bastidor O Sagrado Coração de Jesus - 16cm',
+        describe: 'Bastidor O Sagrado Coração de Jesus - 22cm',
         price: 110.00
     },
     {
